@@ -1,0 +1,116 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo */
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d9d9d9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Título */
+h1{
+    position: absolute;
+    top: 30px;
+    font-weight: 400;
+    color: #333;
+}
+
+/* Calculadora */
+#Contenedor{
+    width: 360px;
+    background: #bfbfbf;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 
+        inset -4px -4px 8px rgba(0,0,0,0.2),
+        inset 4px 4px 8px rgba(255,255,255,0.6),
+        5px 8px 20px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Logo */
+#logo{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #003366;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+/* Pantalla estilo LCD */
+#Resultado{
+    height: 70px;
+    background: #cfe8b0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 15px;
+    font-size: 1.8rem;
+    font-family: "Courier New", monospace;
+    color: #1b3b1b;
+    box-shadow: 
+        inset 2px 2px 4px rgba(0,0,0,0.3),
+        inset -2px -2px 4px rgba(255,255,255,0.5);
+}
+
+/* Grids */
+#numeros,
+#operadores{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Botones estilo Casio */
+button{
+    height: 45px;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: #4d4d4d;
+    color: rgb(255, 255, 255);
+    box-shadow: 
+        2px 2px 3px rgba(0,0,0,0.5),
+        inset -1px -1px 2px rgba(255,255,255,0.1);
+    transition: 0.1s ease;
+}
+
+/* Efecto presión real */
+button:active{
+    transform: translateY(2px);
+    box-shadow: 
+        inset 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Números */
+#numeros button{
+    background: #2f2f2f;
+}
+
+/* Operadores */
+#operadores button{
+    background: #666666;
+}
+
+/* Botón igual azul Casio */
+#operadores button:nth-child(6){
+    background: #1e4fa1;
+}
+
+/* Botón C rojo */
+#operadores button:nth-child(5){
+    background: #a11e1e;
+}
